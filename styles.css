@@ -1,0 +1,143 @@
+:root{
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000');
+    top:0px; bottom: 0px;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    overflow-x: scroll;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title{
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    color: rgb(4, 39, 60, 1);
+}
+
+#search-results-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-top-section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3em;
+}
+.item-bottom-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0.5rem;
+}
+
+#anime-name-input{
+    font-family: 'Ubuntu', sans-serif;
+    width: 50%;
+    margin-bottom: 3rem;
+    border-radius: 5vw;
+    padding-top:0.2em;
+    padding-bottom:0.2em;
+    padding-left:0.8em;
+    padding-right:0.8em;
+    border-color: transparent;
+    font-weight: 300;
+    font-size: 1.6em;
+    outline: none;
+}
+
+#search-anime-button{
+    font-family: 'Ubuntu', sans-serif;
+    transition: background-color 0.15s;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 1rem;
+
+    width: 14rem;
+    font-size: 1.5em;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    padding-left:0.8em;
+    padding-right:0.8em;
+    color: white;
+    background-color: rgb(4, 39, 60, 0.6);
+}
+
+#search-anime-button:hover{
+    background-color: rgb(4, 39, 60, 0.8);
+}
+
+#search-anime-button:active{
+    background-color: rgb(4, 39, 60, 0.9);
+}
+
+.anime-info-item-div{
+    display: flex;
+    flex-direction: column;
+    width: max(40vw, 300px);
+    /* margin-top: 40px; */
+    /* background-color:rgba(0, 0, 0, 0.4); */
+    background-color: rgb(4, 39, 60, 0.5);
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4rem;
+    padding: 2em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.anime-title{
+    color: rgb(241, 241, 241);
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-left: 0.5em;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.anime-image{
+    width: 10em;
+    height: 100%;
+    border-radius: 3em;
+}
+
+.anime-ranking{
+    font-weight: 300;
+    font-size: 1.4rem;
+    color:white;
+}
+
+.anime-description{
+    color: rgb(241, 241, 241);
+    font-weight: 300;
+    line-height:1.5;
+    font-size: 1.6em;
+}
+
+.anime-episodes{
+    color: rgb(241, 241, 241);
+    font-weight: 300;
+    font-size: 1.4em;
+}
