@@ -55,6 +55,17 @@ const searchAnimeInfo = () => {
                 animeEpisodes.innerHTML = `Number of episodes: ${response["data"][item].episodes}`;
             }
 
+            const animeStatus = document.createElement('div');
+            animeStatus.className = "anime-status";
+            animeStatus.innerHTML = `Status: ${response["data"][item].status}`;
+
+            const animeGenres = document.createElement('div');
+            animeGenres.className = "anime-genres";
+            animeGenres.innerHTML = `Genres: ${response["data"][item].genres}`;
+
+            const animeType = document.createElement('div');
+            animeType.className = "anime-type";
+            animeType.innerHTML = `Type: ${response["data"][item].type}`;
 
 
             const itemTopSection = document.createElement('div');
@@ -70,10 +81,13 @@ const searchAnimeInfo = () => {
 
             animeItemDiv.appendChild(itemTopSection);
 
-            if(hasEpisodes)
+            if(hasEpisodes && response["data"][item].type != "Movie")
             {
                 itemBottomSection.appendChild(animeEpisodes);
             }
+            itemBottomSection.appendChild(animeGenres);
+            itemBottomSection.appendChild(animeType)
+            itemBottomSection.appendChild(animeStatus);
             if(hasRanking)
             {
                 itemBottomSection.appendChild(animeRanking);

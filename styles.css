@@ -105,6 +105,8 @@ header{
 .item-bottom-section{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 2;
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
@@ -135,6 +137,18 @@ header{
     color:white;
 }
 
+.anime-status{
+    font-weight: 300;
+    font-size: 1.4rem;
+    color:white;
+}
+
+.anime-genres{
+    font-weight: 300;
+    font-size: 1.4rem;
+    color:white;
+}
+
 .anime-description{
     color: rgb(241, 241, 241);
     font-weight: 300;
@@ -146,4 +160,13 @@ header{
     color: rgb(241, 241, 241);
     font-weight: 300;
     font-size: 1.4em;
+    margin-right: 0.8rem;
+}
+
+.anime-type{
+    color: rgb(241, 241, 241);
+    font-weight: 300;
+    font-size: 1.4em;
+    text-align: center;
+    /* flex-basis: 100%; */
 }
