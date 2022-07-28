@@ -10,7 +10,7 @@ that uses the "Anime DB" API to get info about an anime of the user's choice.
 You are free to use the code for whatever you like.
 
 <h1>Showcase</h1>
-[Imgur](https://i.imgur.com/MC82ank.gifv)
+![Imgur](https://i.imgur.com/MC82ank.gifv)
 
 <h1>📋 License</h1>
 Distributed under the GNU General Public License v3.0 License. See LICENSE for more information.
