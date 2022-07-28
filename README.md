@@ -1,4 +1,4 @@
-# Anime-Info-Webapp
+# myAnimeDB
 A simple web app that provides info about the animes that match the search terms that the user uses
 
 I wanted to put my freshly learned HTML, CSS, and JavaScript skills to a little test
