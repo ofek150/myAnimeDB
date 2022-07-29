@@ -17,8 +17,10 @@ const searchAnimeInfo = () => {
 	.then(response => {
         console.log(response);
         for (item in response["data"]){
-            const hasEpisodes = response["data"][item].hasEpisode;
-            const hasRanking  = response["data"][item].hasRanking;
+            const data = response["data"][item];
+
+            const hasEpisodes = data.hasEpisode;
+            const hasRanking  = data.hasRanking;
             let animeEpisodes = {};
 
             const animeItemDiv = document.createElement('div');
@@ -26,23 +28,23 @@ const searchAnimeInfo = () => {
 
             const animeImage = document.createElement('img');
             animeImage.className = "anime-image";
-            animeImage.src = response["data"][item].image;
-            animeImage.alt = `"${response["data"][item].title}" anime image`;
+            animeImage.src = data.image;
+            animeImage.alt = `"${data.title}" anime image`;
 
             const animeTitle = document.createElement('div');
             animeTitle.className = "anime-title"
-            animeTitle.innerHTML = response["data"][item].title;
+            animeTitle.innerHTML = data.title;
 
             if (hasRanking)
             {
                 animeRanking = document.createElement('div');
                 animeRanking.className = "anime-ranking";
-                animeRanking.innerHTML = `MAL Ranking: ${response["data"][item].ranking}`;
+                animeRanking.innerHTML = `MAL Ranking: ${data.ranking}`;
             }
 
             const animeDescription = document.createElement('div');
             animeDescription.className = "anime-description";
-            animeDescription.innerHTML = response["data"][item].synopsis;
+            animeDescription.innerHTML = data.synopsis;
             if(animeDescription.innerHTML == "")
             {
                 animeDescription.innerHTML = "No description available";
@@ -52,20 +54,20 @@ const searchAnimeInfo = () => {
             {
                 animeEpisodes = document.createElement('div');
                 animeEpisodes.className = "anime-episodes";
-                animeEpisodes.innerHTML = `Number of episodes: ${response["data"][item].episodes}`;
+                animeEpisodes.innerHTML = `Number of episodes: ${data.episodes}`;
             }
 
             const animeStatus = document.createElement('div');
             animeStatus.className = "anime-status";
-            animeStatus.innerHTML = `Status: ${response["data"][item].status}`;
+            animeStatus.innerHTML = `Status: ${data.status}`;
 
             const animeGenres = document.createElement('div');
             animeGenres.className = "anime-genres";
-            animeGenres.innerHTML = `Genres: ${response["data"][item].genres}`;
+            animeGenres.innerHTML = `Genres: ${data.genres}`;
 
             const animeType = document.createElement('div');
             animeType.className = "anime-type";
-            animeType.innerHTML = `Type: ${response["data"][item].type}`;
+            animeType.innerHTML = `Type: ${data.type}`;
 
 
             const itemTopSection = document.createElement('div');
@@ -81,7 +83,7 @@ const searchAnimeInfo = () => {
 
             animeItemDiv.appendChild(itemTopSection);
 
-            if(hasEpisodes && response["data"][item].type != "Movie")
+            if(hasEpisodes && data.type != "Movie")
             {
                 itemBottomSection.appendChild(animeEpisodes);
             }
